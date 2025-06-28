@@ -1,34 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState, useEffect } from "react"
+import TareaForm from "./components/TareaForm"
+import ListaTareas from "./components/ListaTareas"
+import type { Tarea } from "./types"
 
-function App() {
-  const [count, setCount] = useState(0)
+const App: React.FC = () => {
+  const [tareas, setTareas] = useState<Tarea[]>([])
+
+  useEffect(() => {
+    const tareasGuardadas = localStorage.getItem("tareas")
+    if (tareasGuardadas) {
+      setTareas(JSON.parse(tareasGuardadas))
+    }
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem("tareas", JSON.stringify(tareas))
+  }, [tareas])
+
+  const agregarTarea = (tarea: Tarea) => {
+    setTareas((prev) => [...prev, tarea])
+  }
+
+  const completarTarea = (id: string) => {
+    setTareas((prev) =>
+      prev.map((t) => (t.id === id ? { ...t, completada: !t.completada } : t))
+    )
+  }
+
+  const eliminarTarea = (id: string) => {
+    setTareas((prev) => prev.filter((t) => t.id !== id))
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div style={{ maxWidth: "600px", margin: "0 auto", padding: "1rem" }}>
+      <h1>Gestor de Tareas</h1>
+      <TareaForm agregarTarea={agregarTarea} />
+      <ListaTareas
+        tareas={tareas}
+        completarTarea={completarTarea}
+        eliminarTarea={eliminarTarea}
+      />
+    </div>
   )
 }
 
