@@ -17,6 +17,7 @@ Un gestor de tareas simple, funcional y elegante, desarrollado con **React** y *
 - [TypeScript](https://www.typescriptlang.org/)
 - Hooks (`useState`, `useEffect`)
 - CSS con estilo embebido
+- Tipado modular con archivos dedicados (types/)
 
 ## 🚀 Instalación
 
@@ -37,7 +38,9 @@ _Abre [http://localhost:5173](http://localhost:5173) para ver el proyecto en acc
 │   ├── ListaTareas.tsx
 │   └── TareaForm.tsx
 ├── types/
-│   └── index.ts
+│   ├── index.ts
+│   ├── tarea.ts
+│   └── filtros.ts
 ├── App.tsx
 └── main.tsx
 ```

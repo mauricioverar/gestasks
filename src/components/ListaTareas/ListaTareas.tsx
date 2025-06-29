@@ -1,4 +1,5 @@
 import React from "react"
+// Tipos globales de la app
 import type { Tarea } from "../../types"
 import "./ListaTareas.scss"
 
