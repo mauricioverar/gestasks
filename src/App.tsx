@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import TareaForm from "./components/TareaForm"
+import TareaForm from "./components/TareaForm/TareaForm"
 import ListaTareas from "./components/ListaTareas"
 import type { Tarea } from "./types"
 
