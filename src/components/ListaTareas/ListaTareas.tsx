@@ -1,5 +1,6 @@
 import React from "react"
-import type { Tarea } from "../types"
+import type { Tarea } from "../../types"
+import "./ListaTareas.scss"
 
 type Props = {
   tareas: Tarea[]
@@ -27,10 +28,12 @@ const ListaTareas: React.FC<Props> = ({
           {tarea.descripcion && <p>{tarea.descripcion}</p>}
           {tarea.fechaLimite && <p>Fecha límite: {tarea.fechaLimite}</p>}
           <p>Prioridad: {tarea.prioridad}</p>
-          <button onClick={() => completarTarea(tarea.id)}>
-            {tarea.completada ? "Deshacer" : "Completar"}
-          </button>
-          <button onClick={() => eliminarTarea(tarea.id)}>Eliminar</button>
+          <div className="botones-tarea">
+            <button onClick={() => completarTarea(tarea.id)}>
+              {tarea.completada ? "Deshacer" : "Completar"}
+            </button>
+            <button onClick={() => eliminarTarea(tarea.id)}>Eliminar</button>
+          </div>
         </li>
       ))}
     </ul>

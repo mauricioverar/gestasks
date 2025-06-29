@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import TareaForm from "./components/TareaForm/TareaForm"
-import ListaTareas from "./components/ListaTareas"
+import ListaTareas from "./components/ListaTareas/ListaTareas"
 import type { Tarea } from "./types"
 
 const App: React.FC = () => {
