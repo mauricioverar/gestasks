@@ -47,7 +47,7 @@ _Abre [http://localhost:5173](http://localhost:5173) para ver el proyecto en acc
 
 ## 🤔 ¿Por qué este proyecto?
 
-Este proyecto fue creado como práctica para desarrollar interfaces intuitivas con React y reforzar el uso de tipado estático y persistencia local. Ideal para quienes estén aprendiendo React moderno con TypeScript.
+Este proyecto fue creado como práctica para desarrollar interfaces intuitivas con React y reforzar el uso de tipado estático y persistencia local.
 
 ## 🧑‍💻 Autor
 
