@@ -16,7 +16,7 @@ Un gestor de tareas simple, funcional y elegante, desarrollado con **React** y *
 - [React](https://react.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
 - Hooks (`useState`, `useEffect`)
-- CSS con estilo embebido
+- sass con estilo embebido
 - Tipado modular con archivos dedicados (types/)
 
 ## 🚀 Instalación
