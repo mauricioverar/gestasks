@@ -22,7 +22,7 @@ Un gestor de tareas simple, funcional y elegante, desarrollado con **React** y *
 ## 🚀 Instalación
 
 ```bash
-git clone https://github.com/tu-usuario/gestor-tareas-react.git
+git clone https://github.com/mauricioverar/gestor-tareas-react.git
 cd gestor-tareas-react
 npm install
 npm run dev
