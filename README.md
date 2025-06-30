@@ -49,13 +49,6 @@ _Abre [http://localhost:5173](http://localhost:5173) para ver el proyecto en acc
 
 Este proyecto fue creado como práctica para desarrollar interfaces intuitivas con React y reforzar el uso de tipado estático y persistencia local. Ideal para quienes estén aprendiendo React moderno con TypeScript.
 
-## 📌 Próximas mejoras (opcional)
-
-- Filtros de tareas (completadas / pendientes)
-- Animaciones de entrada/salida
-- Estilización con SCSS
-- Soporte para tareas con fechas límite
-
 ## 🧑‍💻 Autor
 
 Desarrollado por [**Mauricio**](https://github.com/mauricioverar) con entusiasmo por la creación de herramientas prácticas para el día a día.
