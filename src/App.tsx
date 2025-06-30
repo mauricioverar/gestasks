@@ -17,12 +17,12 @@ const App: React.FC = () => {
     try {
       const tareasGuardadas = localStorage.getItem("tareas")
       if (tareasGuardadas) {
-        console.log("tareasGuardadas", tareasGuardadas)
+        //console.log("tareasGuardadas", tareasGuardadas)
         setTareas(JSON.parse(tareasGuardadas))
-        console.log(
+        /* console.log(
           "Tareas cargadas desde localStorage:",
           JSON.parse(tareasGuardadas)
-        )
+        ) */
       }
     } catch (error) {
       console.error("Error al cargar tareas desde localStorage:", error)
@@ -31,7 +31,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     if (firstLoad.current) {
-      firstLoad.current = false
+      firstLoad.current = false // Evita que se ejecute en el primer renderizado
       return
     }
 
