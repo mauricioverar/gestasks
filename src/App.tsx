@@ -19,10 +19,6 @@ const App: React.FC = () => {
       if (tareasGuardadas) {
         //console.log("tareasGuardadas", tareasGuardadas)
         setTareas(JSON.parse(tareasGuardadas))
-        /* console.log(
-          "Tareas cargadas desde localStorage:",
-          JSON.parse(tareasGuardadas)
-        ) */
       }
     } catch (error) {
       console.error("Error al cargar tareas desde localStorage:", error)
